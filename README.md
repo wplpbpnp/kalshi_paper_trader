@@ -1,222 +1,56 @@
-# Kalshi Minimal Pipeline
+# Kalshi Paper Trader (Research + Execution Pipeline)
 
-This repo now has a single primary workflow with three scripts:
+This repository is a trading/research project built around Kalshi event markets, with a newer streamlined pipeline for data collection, model training, evaluation, and live execution, plus a legacy archive of earlier strategy experiments.
 
-1. `scripts/download_highres.py`
-2. `scripts/train_edge_rnn.py`
-3. `scripts/run_live.py`
+## What This Repo Contains
 
-The goal is to keep one canonical market-data format and one canonical strategy format.
+- A refactored "active" pipeline for:
+  - high-resolution market snapshot collection
+  - label alignment from settled markets
+  - RNN-based edge model training
+  - strategy evaluation (fixed + walk-forward)
+  - dry-run / live execution
+- A legacy archive of prior scripts, backtests, and visual outputs kept for reference (`legacy/`)
 
-Helper script:
+## Project Highlights
 
-- `scripts/build_labels.py` (build/update ticker settlement labels from archived backtest JSON)
+- Unified snapshot schema (`pipeline/schemas.py`) used across training and runtime
+- Reusable data + feature pipeline (`pipeline/data.py`)
+- Torch LSTM classifier for market microstructure sequences (`pipeline/model.py`)
+- Pluggable strategy runtime with built-in `rnn_edge_v1` and plugin support (`pipeline/strategy_runtime.py`)
+- CLI scripts and `Makefile` targets for end-to-end operation
 
-## Repository Layout (Phase 4)
+## Repository Layout
 
-Active paths:
+- `scripts/`: entrypoints for download, labeling, training, evaluation, and live execution
+- `pipeline/`: core training/runtime logic and schemas
+- `market_data/`: Kalshi HTTP/WS clients and market-selection helpers
+- `config/`: runtime config defaults (paths + endpoints)
+- `legacy/code/`: archived strategy research stacks and backtest utilities
+- `legacy/artifacts/`: archived charts and experiment outputs
 
-- `scripts/`
-- `pipeline/`
-- `market_data/` (shared Kalshi HTTP/WS clients + low-level collectors)
-- `config/` (centralized runtime defaults)
-- `secrets/` (local secret files, not committed)
-- `pipeline_data/` (runtime data; high-res snapshots, labels, generated strategies)
+## Active Workflow (Current)
 
-Legacy paths:
+1. Collect high-resolution snapshots (`scripts/download_highres.py`)
+2. Build or sync settlement labels (`scripts/build_labels.py`, `scripts/sync_labels_from_api.py`)
+3. Train an RNN edge model (`scripts/train_edge_rnn.py`)
+4. Evaluate strategy performance (`scripts/evaluate_strategy.py`)
+5. Run the strategy executor (`scripts/run_live.py`)
 
-- `legacy/code/`
-- `legacy/artifacts/`
+## Notes for Reviewers
 
-Legacy content was moved out of the root so only the minimal pipeline is prominent.
+- Secrets are intentionally excluded from version control (`secrets/`, `.env`, `*.pem`).
+- Runtime data and local training outputs (for example `pipeline_data/`) are excluded from the repo.
+- Some legacy datasets / raw market-data caches are excluded, while legacy scripts and charts are retained.
 
-## Canonical Data Format
+## Getting Started
 
-The downloader writes snapshot JSONL records (optionally gzip) with fields like:
+- Install dependencies from `requirements.txt`
+- Create local auth files (see `config/runtime.json` and `.env.example`)
+- Use `make help` to see common commands
 
-- `ts_ms`
-- `market_ticker`
-- `yes_bid`, `yes_ask`
-- `no_bid`, `no_ask`
-- `yes_mid`
-- `spread`
+For the detailed operational guide for the active pipeline (commands, config fields, and workflow examples), see `README.pipeline.md`.
 
-Use the downloader output as the single training/live input format.
+## Disclaimer
 
-## Canonical Strategy Format
-
-Strategies are JSON files (`strategy/v1`) with:
-
-- `strategy_type` (built-in or plugin)
-- `markets` (for example `series_ticker`)
-- `model` (paths and model settings)
-- `signals` (thresholds)
-- `execution` (order behavior)
-- `risk` (trade throttles/safety)
-
-Built-in strategy type in this refactor:
-
-- `rnn_edge_v1` (LSTM classifier that emits entry intents)
-
-You can also load arbitrary strategy code using `strategy_type=plugin` with:
-
-- `plugin.module`
-- `plugin.class`
-
-## End-to-End Usage
-
-### 0) Configure runtime defaults
-
-Edit `config/runtime.json` once:
-
-- `env_file`
-- `pem_file`
-- `series`
-- paths for data/labels/strategy outputs
-
-Default secret locations are:
-
-- `secrets/.env`
-- `secrets/kalshi_secret.pem`
-
-### Quick Commands
-
-```bash
-make help
-make download
-make labels
-make sync-labels
-make train
-make smoke-train
-make evaluate
-make live-dry
-```
-
-You can override defaults:
-
-```bash
-make train CONFIG=config/runtime.json PYTHON=./venv/bin/python
-make live-dry STRATEGY=pipeline_data/strategies/rnn_edge_latest/strategy.json SERIES=KXBTC15M
-make evaluate STRATEGY=pipeline_data/strategies/rnn_edge_latest/strategy.json EVAL_ARGS="--mode walkforward --train-markets 200 --test-markets 50 --step-markets 50 --epochs 3"
-make sync-labels SYNC_ARGS="--output pipeline_data/labels/aligned.json --unresolved-out pipeline_data/labels/unresolved.json"
-```
-
-`make train` now automatically runs a post-train evaluation pass (fixed replay mode by default).
-
-```bash
-# Disable auto-eval if needed
-make train EVAL_AFTER_TRAIN=0
-
-# Customize post-train evaluation settings
-make train POST_TRAIN_EVAL_ARGS="--mode fixed --test-frac 0.2 --out pipeline_data/strategies/rnn_edge_latest/eval_after_train.json"
-```
-
-### 1) Download high-resolution data
-
-```bash
-python scripts/download_highres.py \
-  --config config/runtime.json \
-  --series KXBTC15M \
-  --snapshot-ms 100 \
-  --out-dir pipeline_data/highres
-```
-
-### 2) Train RNN edge model and emit strategy file
-
-If you need to refresh labels from archived historical data:
-
-```bash
-python scripts/build_labels.py --config config/runtime.json
-```
-
-To align labels with your current snapshots (and pull settled outcomes for missing tickers from Kalshi API):
-
-```bash
-python scripts/sync_labels_from_api.py \
-  --config config/runtime.json \
-  --output pipeline_data/labels/aligned.json \
-  --unresolved-out pipeline_data/labels/unresolved.json
-```
-
-Then train against aligned labels:
-
-```bash
-python scripts/train_edge_rnn.py \
-  --config config/runtime.json \
-  --labels pipeline_data/labels/aligned.json
-```
-
-```bash
-python scripts/train_edge_rnn.py \
-  --config config/runtime.json \
-  --snapshots "pipeline_data/highres/*.snap_*ms.jsonl.gz" \
-  --labels pipeline_data/labels/kalshi_settlements.json \
-  --outdir pipeline_data/strategies/rnn_edge_latest \
-  --device cpu
-```
-
-Outputs:
-
-- `pipeline_data/strategies/rnn_edge_latest/model.pt`
-- `pipeline_data/strategies/rnn_edge_latest/strategy.json`
-- `pipeline_data/strategies/rnn_edge_latest/metrics.json`
-
-### 2b) Evaluate strategy edge (out-of-sample)
-
-Walk-forward (default):
-
-```bash
-python scripts/evaluate_strategy.py \
-  --config config/runtime.json \
-  --strategy pipeline_data/strategies/rnn_edge_latest/strategy.json \
-  --mode walkforward \
-  --train-markets 200 \
-  --test-markets 50 \
-  --step-markets 50 \
-  --epochs 3 \
-  --out pipeline_data/strategies/rnn_edge_latest/eval_walkforward.json
-```
-
-Fixed strategy replay on latest holdout:
-
-```bash
-python scripts/evaluate_strategy.py \
-  --config config/runtime.json \
-  --strategy pipeline_data/strategies/rnn_edge_latest/strategy.json \
-  --mode fixed \
-  --test-frac 0.2 \
-  --out pipeline_data/strategies/rnn_edge_latest/eval_fixed.json
-```
-
-### 3) Run the strategy executor
-
-Dry-run (default):
-
-```bash
-python scripts/run_live.py \
-  --config config/runtime.json \
-  --strategy pipeline_data/strategies/rnn_edge_latest/strategy.json \
-  --series KXBTC15M
-```
-
-Live:
-
-```bash
-python scripts/run_live.py \
-  --config config/runtime.json \
-  --strategy pipeline_data/strategies/rnn_edge_latest/strategy.json \
-  --series KXBTC15M \
-  --live
-```
-
-## New Core Modules
-
-- `pipeline/schemas.py`: unified data/strategy schema objects
-- `pipeline/data.py`: snapshot IO + feature extraction
-- `pipeline/model.py`: RNN model + checkpoint IO
-- `pipeline/train_rnn.py`: train/eval pipeline
-- `pipeline/strategy_runtime.py`: strategy loader and execution runtime
-
-## Legacy Code
-
-Older scripts and experiments are archived under `legacy/` for reference. The intended path is the three scripts above.
+This is research/trading software and not financial advice. Use live trading functionality at your own risk.
