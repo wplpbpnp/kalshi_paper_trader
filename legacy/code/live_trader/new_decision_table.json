@@ -1,0 +1,130 @@
+{
+  "generated": "2026-01-27T10:31:01.118445",
+  "mode": "prediction",
+  "window_minutes": 15,
+  "min_composite_threshold": 300.0,
+  "fractional_kelly": 0.25,
+  "decay_half_life_days": 1.0,
+  "total_cells": 7,
+  "cells": [
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "YES",
+      "kelly": 0.5224,
+      "composite": 419.3076,
+      "ev": 28.7305,
+      "p_win": 0.7373,
+      "samples": 235,
+      "trades": 213
+    },
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.6,
+        0.7
+      ],
+      "side": "NO",
+      "kelly": 0.4482,
+      "composite": 410.8906,
+      "ev": 20.3671,
+      "p_win": 0.7537,
+      "samples": 480,
+      "trades": 407
+    },
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.1,
+        0.2
+      ],
+      "side": "NO",
+      "kelly": 0.2653,
+      "composite": 363.2165,
+      "ev": 11.9554,
+      "p_win": 0.6696,
+      "samples": 923,
+      "trades": 923
+    },
+    {
+      "price_bucket": [
+        60,
+        70
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "NO",
+      "kelly": 0.3579,
+      "composite": 361.7993,
+      "ev": 23.5014,
+      "p_win": 0.585,
+      "samples": 272,
+      "trades": 237
+    },
+    {
+      "price_bucket": [
+        30,
+        40
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "NO",
+      "kelly": 0.6029,
+      "composite": 350.928,
+      "ev": 21.2781,
+      "p_win": 0.8628,
+      "samples": 304,
+      "trades": 272
+    },
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.67,
+      "composite": 319.6466,
+      "ev": 30.2038,
+      "p_win": 0.852,
+      "samples": 118,
+      "trades": 112
+    },
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.7,
+        0.8
+      ],
+      "side": "NO",
+      "kelly": 0.5203,
+      "composite": 313.5321,
+      "ev": 23.5002,
+      "p_win": 0.785,
+      "samples": 180,
+      "trades": 178
+    }
+  ]
+}

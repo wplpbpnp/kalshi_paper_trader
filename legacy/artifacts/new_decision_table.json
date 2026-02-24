@@ -1,0 +1,282 @@
+{
+  "generated": "2026-01-26T20:26:08.867775",
+  "mode": "prediction",
+  "window_minutes": 15,
+  "min_composite_threshold": 0.5,
+  "fractional_kelly": 0.25,
+  "total_cells": 16,
+  "cells": [
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "NO",
+      "kelly": 0.6857,
+      "composite": 1.5575,
+      "ev": 2.4584,
+      "p_win": 0.9885,
+      "samples": 1993,
+      "trades": 1210
+    },
+    {
+      "price_bucket": [
+        30,
+        40
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.4597,
+      "composite": 1.5049,
+      "ev": 15.6961,
+      "p_win": 0.8137,
+      "samples": 102,
+      "trades": 98
+    },
+    {
+      "price_bucket": [
+        10,
+        20
+      ],
+      "time_bucket": [
+        0.5,
+        0.6
+      ],
+      "side": "NO",
+      "kelly": 0.4211,
+      "composite": 1.0197,
+      "ev": 6.0,
+      "p_win": 0.9164,
+      "samples": 550,
+      "trades": 540
+    },
+    {
+      "price_bucket": [
+        80,
+        90
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "YES",
+      "kelly": 0.5146,
+      "composite": 0.9974,
+      "ev": 7.5694,
+      "p_win": 0.9282,
+      "samples": 209,
+      "trades": 198
+    },
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.5,
+        0.6
+      ],
+      "side": "NO",
+      "kelly": 0.4994,
+      "composite": 0.9074,
+      "ev": 2.8808,
+      "p_win": 0.9708,
+      "samples": 411,
+      "trades": 400
+    },
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.1,
+        0.2
+      ],
+      "side": "NO",
+      "kelly": 1.0,
+      "composite": 0.8836,
+      "ev": 6.7188,
+      "p_win": 1.0,
+      "samples": 16,
+      "trades": 16
+    },
+    {
+      "price_bucket": [
+        90,
+        100
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "YES",
+      "kelly": 0.5228,
+      "composite": 0.8254,
+      "ev": 1.8495,
+      "p_win": 0.9827,
+      "samples": 2196,
+      "trades": 1339
+    },
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.657,
+      "composite": 0.7296,
+      "ev": 1.2551,
+      "p_win": 0.9932,
+      "samples": 2356,
+      "trades": 1521
+    },
+    {
+      "price_bucket": [
+        80,
+        90
+      ],
+      "time_bucket": [
+        0.5,
+        0.6
+      ],
+      "side": "YES",
+      "kelly": 0.3298,
+      "composite": 0.7208,
+      "ev": 4.983,
+      "p_win": 0.8978,
+      "samples": 499,
+      "trades": 485
+    },
+    {
+      "price_bucket": [
+        10,
+        20
+      ],
+      "time_bucket": [
+        0.7,
+        0.8
+      ],
+      "side": "NO",
+      "kelly": 0.4062,
+      "composite": 0.7172,
+      "ev": 5.7138,
+      "p_win": 0.9159,
+      "samples": 428,
+      "trades": 419
+    },
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.6,
+        0.7
+      ],
+      "side": "NO",
+      "kelly": 0.4283,
+      "composite": 0.7134,
+      "ev": 2.2446,
+      "p_win": 0.9695,
+      "samples": 1214,
+      "trades": 760
+    },
+    {
+      "price_bucket": [
+        40,
+        50
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.2568,
+      "composite": 0.6243,
+      "ev": 11.3718,
+      "p_win": 0.6667,
+      "samples": 117,
+      "trades": 111
+    },
+    {
+      "price_bucket": [
+        80,
+        90
+      ],
+      "time_bucket": [
+        0.8,
+        0.9
+      ],
+      "side": "YES",
+      "kelly": 0.3064,
+      "composite": 0.5867,
+      "ev": 4.4531,
+      "p_win": 0.8985,
+      "samples": 522,
+      "trades": 459
+    },
+    {
+      "price_bucket": [
+        0,
+        10
+      ],
+      "time_bucket": [
+        0.4,
+        0.5
+      ],
+      "side": "NO",
+      "kelly": 0.473,
+      "composite": 0.56,
+      "ev": 2.9948,
+      "p_win": 0.9665,
+      "samples": 477,
+      "trades": 318
+    },
+    {
+      "price_bucket": [
+        80,
+        90
+      ],
+      "time_bucket": [
+        0.6,
+        0.7
+      ],
+      "side": "YES",
+      "kelly": 0.2807,
+      "composite": 0.5518,
+      "ev": 4.2027,
+      "p_win": 0.8919,
+      "samples": 925,
+      "trades": 725
+    },
+    {
+      "price_bucket": [
+        90,
+        100
+      ],
+      "time_bucket": [
+        0.9,
+        1.0
+      ],
+      "side": "YES",
+      "kelly": 0.514,
+      "composite": 0.5056,
+      "ev": 1.0606,
+      "p_win": 0.9897,
+      "samples": 2425,
+      "trades": 1574
+    }
+  ]
+}

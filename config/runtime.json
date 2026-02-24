@@ -1,0 +1,12 @@
+{
+  "base_url": "https://api.elections.kalshi.com",
+  "ws_url": "wss://api.elections.kalshi.com/trade-api/ws/v2",
+  "series": "KXBTC15M",
+  "env_file": "secrets/.env",
+  "pem_file": "secrets/kalshi_secret.pem",
+  "highres_dir": "pipeline_data/highres",
+  "labels_file": "pipeline_data/labels/kalshi_settlements.json",
+  "strategy_dir": "pipeline_data/strategies/rnn_edge_latest",
+  "poll_seconds": 1.0
+}
+

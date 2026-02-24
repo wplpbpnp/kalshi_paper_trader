@@ -1,0 +1,13 @@
+{
+  "n_markets": 3776,
+  "n_obs": 55930,
+  "uncond_yes_rate": 0.5055614406779662,
+  "train_days": 32,
+  "test_days": 14,
+  "generated_at_utc": "2026-02-01T23:12:06.780715Z",
+  "notes": [
+    "Calibration surface uses YES mid=(bid+ask)/2 from candle open values (top-of-book only).",
+    "Maker toxicity uses OHLC fill heuristic: filled if ask_low <= entry_px within TTL window.",
+    "NO quotes are derived from YES via parity mapping; results for NO are indicative, not definitive."
+  ]
+}

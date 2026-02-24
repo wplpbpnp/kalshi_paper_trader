@@ -1,0 +1,21 @@
+{
+  "bucket_size_cents": 10,
+  "min_samples": 30,
+  "worst_price": false,
+  "kelly_fractional_multiplier": 0.25,
+  "cells": [
+    {
+      "price_range": [
+        0.01,
+        0.1
+      ],
+      "time_range_minutes": [
+        12,
+        13
+      ],
+      "side": "NO",
+      "expected_ev_pct": 0.0574,
+      "kelly_fraction": 0.003187
+    }
+  ]
+}

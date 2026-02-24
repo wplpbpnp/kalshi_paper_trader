@@ -1,0 +1,8 @@
+requests
+cryptography
+websockets
+numpy
+pandas
+matplotlib
+yfinance
+torch

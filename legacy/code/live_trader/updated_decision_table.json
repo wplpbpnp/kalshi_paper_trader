@@ -1,0 +1,589 @@
+{
+  "generated": "2026-01-27T16:52:17.059451",
+  "mode": "prediction",
+  "window_minutes": 15,
+  "min_composite_threshold": 100.0,
+  "fractional_kelly": 0.25,
+  "decay_half_life_days": 3.0,
+  "total_cells": 34,
+  "cells": [
+    {
+      "price_bucket": [
+        50,
+        55
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.9977,
+      "composite": 314.3102,
+      "ev": 47.384,
+      "p_win": 0.9988,
+      "samples": 44,
+      "trades": 44
+    },
+    {
+      "price_bucket": [
+        50,
+        55
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.8631,
+      "composite": 252.393,
+      "ev": 40.4152,
+      "p_win": 0.9292,
+      "samples": 39,
+      "trades": 39
+    },
+    {
+      "price_bucket": [
+        80,
+        85
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.7945,
+      "composite": 236.338,
+      "ev": 61.0222,
+      "p_win": 0.8352,
+      "samples": 15,
+      "trades": 15
+    },
+    {
+      "price_bucket": [
+        40,
+        45
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.9244,
+      "composite": 211.366,
+      "ev": 34.2881,
+      "p_win": 0.9679,
+      "samples": 38,
+      "trades": 38
+    },
+    {
+      "price_bucket": [
+        55,
+        60
+      ],
+      "time_bucket": [
+        0.35,
+        0.4
+      ],
+      "side": "NO",
+      "kelly": 0.9738,
+      "composite": 183.8941,
+      "ev": 51.003,
+      "p_win": 0.985,
+      "samples": 13,
+      "trades": 13
+    },
+    {
+      "price_bucket": [
+        65,
+        70
+      ],
+      "time_bucket": [
+        0.1,
+        0.15
+      ],
+      "side": "NO",
+      "kelly": 0.2123,
+      "composite": 176.1605,
+      "ev": 9.9255,
+      "p_win": 0.4743,
+      "samples": 315,
+      "trades": 315
+    },
+    {
+      "price_bucket": [
+        40,
+        45
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 1.0,
+      "composite": 175.8906,
+      "ev": 37.5,
+      "p_win": 1.0,
+      "samples": 22,
+      "trades": 22
+    },
+    {
+      "price_bucket": [
+        45,
+        50
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 1.0,
+      "composite": 170.0,
+      "ev": 42.5,
+      "p_win": 1.0,
+      "samples": 16,
+      "trades": 16
+    },
+    {
+      "price_bucket": [
+        80,
+        85
+      ],
+      "time_bucket": [
+        0.05,
+        0.1
+      ],
+      "side": "NO",
+      "kelly": 0.305,
+      "composite": 163.0598,
+      "ev": 20.8777,
+      "p_win": 0.4338,
+      "samples": 61,
+      "trades": 61
+    },
+    {
+      "price_bucket": [
+        40,
+        45
+      ],
+      "time_bucket": [
+        0.2,
+        0.25
+      ],
+      "side": "NO",
+      "kelly": 0.3131,
+      "composite": 162.7587,
+      "ev": 8.6628,
+      "p_win": 0.7116,
+      "samples": 353,
+      "trades": 353
+    },
+    {
+      "price_bucket": [
+        90,
+        95
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.2328,
+      "composite": 159.9785,
+      "ev": 16.7703,
+      "p_win": 0.2927,
+      "samples": 91,
+      "trades": 91
+    },
+    {
+      "price_bucket": [
+        90,
+        95
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 0.4556,
+      "composite": 153.5824,
+      "ev": 37.2492,
+      "p_win": 0.4975,
+      "samples": 17,
+      "trades": 17
+    },
+    {
+      "price_bucket": [
+        55,
+        60
+      ],
+      "time_bucket": [
+        0.5,
+        0.55
+      ],
+      "side": "YES",
+      "kelly": 0.3902,
+      "composite": 142.8064,
+      "ev": 11.5831,
+      "p_win": 0.7408,
+      "samples": 152,
+      "trades": 152
+    },
+    {
+      "price_bucket": [
+        20,
+        25
+      ],
+      "time_bucket": [
+        0.85,
+        0.9
+      ],
+      "side": "YES",
+      "kelly": 0.2527,
+      "composite": 141.4117,
+      "ev": 14.5855,
+      "p_win": 0.4209,
+      "samples": 94,
+      "trades": 94
+    },
+    {
+      "price_bucket": [
+        30,
+        35
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 1.0,
+      "composite": 140.223,
+      "ev": 27.5,
+      "p_win": 1.0,
+      "samples": 26,
+      "trades": 26
+    },
+    {
+      "price_bucket": [
+        30,
+        35
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.6892,
+      "composite": 139.926,
+      "ev": 17.629,
+      "p_win": 0.9013,
+      "samples": 63,
+      "trades": 63
+    },
+    {
+      "price_bucket": [
+        25,
+        30
+      ],
+      "time_bucket": [
+        0.65,
+        0.7
+      ],
+      "side": "NO",
+      "kelly": 0.6336,
+      "composite": 139.8693,
+      "ev": 12.6632,
+      "p_win": 0.9016,
+      "samples": 122,
+      "trades": 122
+    },
+    {
+      "price_bucket": [
+        45,
+        50
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "YES",
+      "kelly": 0.5002,
+      "composite": 137.7773,
+      "ev": 21.2595,
+      "p_win": 0.7376,
+      "samples": 42,
+      "trades": 42
+    },
+    {
+      "price_bucket": [
+        45,
+        50
+      ],
+      "time_bucket": [
+        0.6,
+        0.65
+      ],
+      "side": "NO",
+      "kelly": 0.3273,
+      "composite": 129.8599,
+      "ev": 10.9362,
+      "p_win": 0.6844,
+      "samples": 141,
+      "trades": 141
+    },
+    {
+      "price_bucket": [
+        75,
+        80
+      ],
+      "time_bucket": [
+        0.2,
+        0.25
+      ],
+      "side": "YES",
+      "kelly": 0.6042,
+      "composite": 126.6198,
+      "ev": 8.5955,
+      "p_win": 0.911,
+      "samples": 217,
+      "trades": 217
+    },
+    {
+      "price_bucket": [
+        95,
+        100
+      ],
+      "time_bucket": [
+        0.05,
+        0.1
+      ],
+      "side": "NO",
+      "kelly": 0.2174,
+      "composite": 124.873,
+      "ev": 15.2557,
+      "p_win": 0.2276,
+      "samples": 67,
+      "trades": 67
+    },
+    {
+      "price_bucket": [
+        55,
+        60
+      ],
+      "time_bucket": [
+        0.25,
+        0.3
+      ],
+      "side": "NO",
+      "kelly": 0.2024,
+      "composite": 117.585,
+      "ev": 7.1428,
+      "p_win": 0.5464,
+      "samples": 271,
+      "trades": 271
+    },
+    {
+      "price_bucket": [
+        40,
+        45
+      ],
+      "time_bucket": [
+        0.5,
+        0.55
+      ],
+      "side": "YES",
+      "kelly": 0.2535,
+      "composite": 116.5081,
+      "ev": 9.5769,
+      "p_win": 0.5708,
+      "samples": 148,
+      "trades": 148
+    },
+    {
+      "price_bucket": [
+        20,
+        25
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.8067,
+      "composite": 114.8267,
+      "ev": 13.3483,
+      "p_win": 0.9585,
+      "samples": 74,
+      "trades": 74
+    },
+    {
+      "price_bucket": [
+        20,
+        25
+      ],
+      "time_bucket": [
+        0.1,
+        0.15
+      ],
+      "side": "NO",
+      "kelly": 0.7257,
+      "composite": 114.7454,
+      "ev": 11.4176,
+      "p_win": 0.9392,
+      "samples": 101,
+      "trades": 101
+    },
+    {
+      "price_bucket": [
+        40,
+        45
+      ],
+      "time_bucket": [
+        0.35,
+        0.4
+      ],
+      "side": "YES",
+      "kelly": 0.5821,
+      "composite": 113.8746,
+      "ev": 28.4686,
+      "p_win": 0.7597,
+      "samples": 16,
+      "trades": 16
+    },
+    {
+      "price_bucket": [
+        45,
+        50
+      ],
+      "time_bucket": [
+        0.65,
+        0.7
+      ],
+      "side": "NO",
+      "kelly": 0.3229,
+      "composite": 110.1357,
+      "ev": 10.5978,
+      "p_win": 0.681,
+      "samples": 108,
+      "trades": 108
+    },
+    {
+      "price_bucket": [
+        60,
+        65
+      ],
+      "time_bucket": [
+        0.8,
+        0.85
+      ],
+      "side": "NO",
+      "kelly": 0.2564,
+      "composite": 109.6218,
+      "ev": 11.4915,
+      "p_win": 0.5399,
+      "samples": 91,
+      "trades": 91
+    },
+    {
+      "price_bucket": [
+        35,
+        40
+      ],
+      "time_bucket": [
+        0.95,
+        1.0
+      ],
+      "side": "NO",
+      "kelly": 1.0,
+      "composite": 107.7903,
+      "ev": 32.5,
+      "p_win": 1.0,
+      "samples": 11,
+      "trades": 11
+    },
+    {
+      "price_bucket": [
+        55,
+        60
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.3924,
+      "composite": 107.748,
+      "ev": 17.958,
+      "p_win": 0.6546,
+      "samples": 36,
+      "trades": 36
+    },
+    {
+      "price_bucket": [
+        20,
+        25
+      ],
+      "time_bucket": [
+        0.25,
+        0.3
+      ],
+      "side": "NO",
+      "kelly": 0.5497,
+      "composite": 106.9924,
+      "ev": 7.5467,
+      "p_win": 0.9005,
+      "samples": 201,
+      "trades": 201
+    },
+    {
+      "price_bucket": [
+        85,
+        90
+      ],
+      "time_bucket": [
+        0.9,
+        0.95
+      ],
+      "side": "NO",
+      "kelly": 0.2224,
+      "composite": 105.0874,
+      "ev": 14.7152,
+      "p_win": 0.3222,
+      "samples": 51,
+      "trades": 51
+    },
+    {
+      "price_bucket": [
+        55,
+        60
+      ],
+      "time_bucket": [
+        0.45,
+        0.5
+      ],
+      "side": "NO",
+      "kelly": 0.2241,
+      "composite": 102.9849,
+      "ev": 8.3258,
+      "p_win": 0.5583,
+      "samples": 153,
+      "trades": 153
+    },
+    {
+      "price_bucket": [
+        45,
+        50
+      ],
+      "time_bucket": [
+        0.35,
+        0.4
+      ],
+      "side": "NO",
+      "kelly": 0.7851,
+      "composite": 102.3379,
+      "ev": 32.3621,
+      "p_win": 0.8986,
+      "samples": 10,
+      "trades": 10
+    }
+  ]
+}

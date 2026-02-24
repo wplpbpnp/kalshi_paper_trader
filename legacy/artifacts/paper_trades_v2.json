@@ -1,0 +1,43 @@
+{
+  "starting_balance": 1000,
+  "final_balance": 1000,
+  "trades": [],
+  "pending_trades": {
+    "KXBTC15M-26JAN280015-15": [
+      {
+        "ticker": "KXBTC15M-26JAN280015-15",
+        "action": "BUY_NO",
+        "price": 0.32,
+        "yes_mid": 0.69,
+        "spread": 0.02,
+        "bet_size": 53,
+        "time_remaining": 12.949633299999999,
+        "time_fraction": 0.1366910766666667,
+        "kelly": 0.2123,
+        "cell_ev": 9.9255,
+        "cell_p_win": 0.4743,
+        "cell": {
+          "price_bucket": [
+            65,
+            70
+          ],
+          "time_bucket": [
+            0.1,
+            0.15
+          ],
+          "side": "NO",
+          "kelly": 0.2123,
+          "composite": 176.1605,
+          "ev": 9.9255,
+          "p_win": 0.4743,
+          "samples": 315,
+          "trades": 315
+        },
+        "timestamp": "2026-01-28T05:02:03.022055+00:00",
+        "close_time": "2026-01-28T05:15:00Z",
+        "strike": 88865.2,
+        "status": "pending"
+      }
+    ]
+  }
+}

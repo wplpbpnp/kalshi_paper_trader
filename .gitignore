@@ -1,0 +1,34 @@
+# Local secrets
+.env
+*.pem
+secrets/
+config/runtime.local.json
+.DS_Store
+*.DS_Store
+
+# Python cache/build
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Local virtualenvs
+venv/
+.venv/
+
+# Data/artifacts
+pipeline_data/
+market_data/data/
+market_data/pumpfun_cache/
+*.png
+*.jsonl
+*.jsonl.gz
+!legacy/**/*.png
+
+# Legacy market data / raw outputs (keep legacy scripts + images)
+legacy/artifacts/market_data/
+legacy/code/crypto_policy/data/
+legacy/code/edge_finder/data/
+legacy/artifacts/kalshi_backtest_data.json
+legacy/code/live_trader/kalshi_backtest_data.json
+legacy/code/live_trader/live_trades.json

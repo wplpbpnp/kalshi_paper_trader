@@ -1,0 +1,41 @@
+{
+  "bar_minutes": 30,
+  "assets": [
+    {"id": "SPY", "kind": "equity_etf", "csv": "SPY_30m.csv", "features": "prices"},
+    {"id": "TLT", "kind": "bond_etf", "csv": "TLT_30m.csv", "features": "prices"},
+    {"id": "GLD", "kind": "commodity_etf", "csv": "GLD_30m.csv", "features": "prices"},
+    {"id": "EURUSD", "kind": "fx", "csv": "EURUSD_30m.csv", "features": "prices"},
+    {"id": "BTCUSDT", "kind": "crypto", "csv": "BTCUSDT_30m_2023plus.csv", "features": "basic"},
+    {"id": "ETHUSDT", "kind": "crypto", "csv": "ETHUSDT_30m.csv", "features": "basic"},
+    {"id": "PENGUUSDT", "kind": "crypto_memecoin", "csv": "PENGUUSDT_30m_full.csv", "features": "basic"},
+    {"id": "CL", "kind": "futures", "csv": "CL_30m.csv", "features": "prices"},
+    {"id": "GC", "kind": "futures", "csv": "GC_30m.csv", "features": "prices"},
+    {"id": "ES", "kind": "futures", "csv": "ES_30m.csv", "features": "prices"}
+  ],
+  "scanner_defaults": {
+    "train_days": 21,
+    "test_days": 7,
+    "step_days": 7,
+    "episode_days": 7,
+    "lookback": 144,
+    "epochs": 5,
+    "batch_episodes": 128,
+    "lr": 0.0003,
+    "gamma": 1.0,
+    "entropy_coef": 0.01,
+    "hidden": [64],
+    "mode": {
+      "one_decision_per_episode": true,
+      "long_only": true,
+      "carry_position": true,
+      "liquidate_end": true
+    },
+    "seeds": "1-50",
+    "cost_scenarios": [
+      {"name": "low", "fee_bps": 0.5, "slippage_bps": 0.5},
+      {"name": "mid", "fee_bps": 1.0, "slippage_bps": 2.0},
+      {"name": "high", "fee_bps": 5.0, "slippage_bps": 15.0}
+    ]
+  }
+}
+
