@@ -2,6 +2,8 @@
 
 This repository is a trading/research project built around Kalshi event markets, with a newer streamlined pipeline for data collection, model training, evaluation, and live execution, plus a legacy archive of earlier strategy experiments.
 
+If you are browsing this as a portfolio project, scroll down to the "Sample Output Gallery" section to view example PNG outputs from archived experiments (illustrative only).
+
 ## What This Repo Contains
 
 - A refactored "active" pipeline for:
