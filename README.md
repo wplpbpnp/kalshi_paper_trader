@@ -55,12 +55,7 @@ For the detailed operational guide for the active pipeline (commands, config fie
 
 ## Sample Output Gallery
 
-Caption: The PNGs below are sample output displays from archived experiments and diagnostics. They are illustrative only and are not intended to reflect accurate market data, validated signals, or real trading performance.
-
-### Legacy Artifacts
-
-_Sample output displays only (illustrative; not accurate market data)._
-
+The PNGs below are sample output displays from archived experiments and diagnostics. They are illustrative only and are not intended to reflect accurate market data, validated signals, or real trading performance.
 
 ### Edge Finder Charts (Legacy)
 
