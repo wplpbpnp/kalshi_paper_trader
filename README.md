@@ -61,40 +61,23 @@ Caption: The PNGs below are sample output displays from archived experiments and
 
 _Sample output displays only (illustrative; not accurate market data)._
 
-![legacy/artifacts/kalshi_test.png](legacy/artifacts/kalshi_test.png)
-![legacy/artifacts/kalshi_test_ev.png](legacy/artifacts/kalshi_test_ev.png)
-![legacy/artifacts/momentum_backtest_performance.png](legacy/artifacts/momentum_backtest_performance.png)
-![legacy/artifacts/probability_surface_15min.png](legacy/artifacts/probability_surface_15min.png)
-![legacy/artifacts/probability_surface_15min_ev.png](legacy/artifacts/probability_surface_15min_ev.png)
-![legacy/artifacts/test.png](legacy/artifacts/test.png)
-![legacy/artifacts/test_ev.png](legacy/artifacts/test_ev.png)
 
 ### Edge Finder Charts (Legacy)
 
 _Sample output displays only (illustrative; not accurate market data)._
 
-![legacy/code/edge_finder/charts/KXBTC15M_calibration.png](legacy/code/edge_finder/charts/KXBTC15M_calibration.png)
-![legacy/code/edge_finder/charts/KXBTC15M_edge.png](legacy/code/edge_finder/charts/KXBTC15M_edge.png)
 ![legacy/code/edge_finder/charts/KXBTC15M_fair_value_surface.png](legacy/code/edge_finder/charts/KXBTC15M_fair_value_surface.png)
-![legacy/code/edge_finder/charts/KXBTC15M_surface_heatmap.png](legacy/code/edge_finder/charts/KXBTC15M_surface_heatmap.png)
 ![legacy/code/edge_finder/charts/KXBTC15M_time_calibration.png](legacy/code/edge_finder/charts/KXBTC15M_time_calibration.png)
-![legacy/code/edge_finder/charts/KXBTC15M_time_edge.png](legacy/code/edge_finder/charts/KXBTC15M_time_edge.png)
 
 ### Live Trader Visuals (Legacy)
 
 _Sample output displays only (illustrative; not accurate market data)._
 
 ![legacy/code/live_trader/kalshi_no_ev_conservative.png](legacy/code/live_trader/kalshi_no_ev_conservative.png)
-![legacy/code/live_trader/kalshi_no_winrate_conservative.png](legacy/code/live_trader/kalshi_no_winrate_conservative.png)
-![legacy/code/live_trader/kalshi_samples_with_ev_labels.png](legacy/code/live_trader/kalshi_samples_with_ev_labels.png)
-![legacy/code/live_trader/kalshi_samples_with_ev_labels_k_1.png](legacy/code/live_trader/kalshi_samples_with_ev_labels_k_1.png)
 ![legacy/code/live_trader/kalshi_yes_ev_conservative.png](legacy/code/live_trader/kalshi_yes_ev_conservative.png)
 ![legacy/code/live_trader/kalshi_yes_ev_raw.png](legacy/code/live_trader/kalshi_yes_ev_raw.png)
 ![legacy/code/live_trader/kalshi_yes_winrate_conservative.png](legacy/code/live_trader/kalshi_yes_winrate_conservative.png)
 ![legacy/code/live_trader/kalshi_yes_winrate_heatmap.png](legacy/code/live_trader/kalshi_yes_winrate_heatmap.png)
-![legacy/code/live_trader/probability_surface_15min.png](legacy/code/live_trader/probability_surface_15min.png)
-![legacy/code/live_trader/probability_surface_15min_ev.png](legacy/code/live_trader/probability_surface_15min_ev.png)
-![legacy/code/live_trader/rolling_equity_curve.png](legacy/code/live_trader/rolling_equity_curve.png)
 ![legacy/code/live_trader/rolling_ev_top_cells.png](legacy/code/live_trader/rolling_ev_top_cells.png)
 ![legacy/code/live_trader/test.png](legacy/code/live_trader/test.png)
 
