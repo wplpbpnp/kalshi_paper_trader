@@ -77,7 +77,7 @@ _Sample output displays only (illustrative; not accurate market data)._
 ![legacy/code/live_trader/kalshi_yes_winrate_conservative.png](legacy/code/live_trader/kalshi_yes_winrate_conservative.png)
 ![legacy/code/live_trader/kalshi_yes_ev_raw.png](legacy/code/live_trader/kalshi_yes_ev_raw.png)
 ![legacy/code/live_trader/kalshi_yes_ev_conservative.png](legacy/code/live_trader/kalshi_yes_ev_conservative.png)
-![legacy/code/live_trader/kalshi_samples_with_ev_labels_k_1.png](legacy/code/live_trader/kalshi_samples_with_ev_labels.png)
+![legacy/code/live_trader/kalshi_samples_with_ev_labels_k_1.png](legacy/code/live_trader/kalshi_samples_with_ev_labels_k_1.png)
 ![legacy/code/live_trader/rolling_ev_top_cells.png](legacy/code/live_trader/rolling_ev_top_cells.png)
 ![legacy/code/live_trader/test.png](legacy/code/live_trader/test.png)
 
